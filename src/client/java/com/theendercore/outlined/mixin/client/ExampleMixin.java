@@ -10,7 +10,6 @@ import static com.theendercore.outlined.Outlined.log;
 
 @Mixin(Minecraft.class)
 public class ExampleMixin {
-
     @Inject(at = @At("HEAD"), method = "run")
     private void run(CallbackInfo info) {
         log.info("Hello from Mixin");
