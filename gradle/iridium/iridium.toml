@@ -1,18 +1,18 @@
-projectTitle = "Team Voided Template"
-modId = "template"
+projectTitle = "Outlined"
+modId = "outlined"
 modVersion = "1.0.0"
-group = "org.teamvoided"
-githubRepo = "Teamvoided/TeamVoidedTemplateMod"
+group = "com.theendercore"
+githubRepo = "theendercore/Outlined"
 discordServerInviteId = "KZ5Q364hEg"
 authors = [ "TheEnderCore" ]
 majorMinecraftVersion = ">=1.21"
 minecraftVersion = "1.21.1"
-fabricLoaderVersion = "0.16.14"
-fabricApiVersion = "0.116.0+1.21.1"
+fabricLoaderVersion = "0.17.2"
+fabricApiVersion = "0.116.6+1.21.1"
 fabricLangKotlinVersion = "1.13.2+kotlin.2.1.20"
 license = "MIT"
 modules = [ ]
-modDescription = "Template Mod Description"
+modDescription = "Mod to help see mobs better"
 # Modmenu badges, values can be: [ library, deprecated ]
 badges = [ ]
 disableKotlin = false
@@ -26,5 +26,5 @@ disableKotlin = false
     # MOJPARCH: Parchment layered on top of the official Mojang mappings
     # MOJYARN: Yarn layered on top of the official Mojang mappings
     # CUSTOM: Custom mapping jar. Uses mappings version as file location
-    type = "QUILT"
-    version = "1.21.1+build.9"
+    type = "MOJANG"
+    version = "1.21.1"
