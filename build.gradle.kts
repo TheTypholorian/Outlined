@@ -30,7 +30,7 @@ repositories {
 //println("Task: " + gradle.startParameter.taskNames.joinToString(","))
 
 modSettings {
-//    entrypoint("main", "com.theendercore.outlined.Outlined::init")
+    entrypoint("main", "com.theendercore.outlined.Outlined::init")
     entrypoint("client", "com.theendercore.outlined.client.OutlinedClient::init")
     entrypoint("fabric-datagen", "com.theendercore.outlined.data.gen.OutlinedData")
 

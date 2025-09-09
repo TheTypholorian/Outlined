@@ -4,7 +4,8 @@
   "package": "com.theendercore.outlined.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "client.ExampleMixin"
+    "client.EntityRenderDispatcherMixin",
+    "client.LevelRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
