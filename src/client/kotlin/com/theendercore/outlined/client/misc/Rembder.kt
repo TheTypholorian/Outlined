@@ -9,6 +9,8 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher
 import net.minecraft.util.FastColor.ARGB32
 import net.minecraft.world.entity.Entity
 
+
+
 fun renderHitbox(
     entityRenderDispatcher: EntityRenderDispatcher,
     poseStack: PoseStack,

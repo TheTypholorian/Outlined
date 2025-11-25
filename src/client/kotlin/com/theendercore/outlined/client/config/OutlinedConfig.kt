@@ -5,12 +5,10 @@ import com.theendercore.outlined.Outlined.id
 import me.fzzyhmstrs.fzzy_config.annotations.NonSync
 import me.fzzyhmstrs.fzzy_config.config.Config
 import me.fzzyhmstrs.fzzy_config.config.ConfigGroup
+import me.fzzyhmstrs.fzzy_config.validation.misc.ValidatedColor
 
 @Suppress("unused")
 class OutlinedConfig: Config(id(MODID)) {
-    var groupName = ConfigGroup("group_id", false)
-
-    @NonSync
-    @ConfigGroup.Pop
+    var color = ValidatedColor()
     var clientEntry = true
 }
