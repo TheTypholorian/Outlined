@@ -2,7 +2,7 @@ package com.theendercore.outlined.client
 
 import com.theendercore.outlined.Outlined.log
 import com.theendercore.outlined.client.config.OutlinedConfig
-import com.theendercore.outlined.client.misc.start
+import com.theendercore.outlined.client.misc.TestingObj
 import me.fzzyhmstrs.fzzy_config.api.ConfigApi
 import me.fzzyhmstrs.fzzy_config.api.RegisterType
 
@@ -12,6 +12,6 @@ object OutlinedClient {
     var config = ConfigApi.registerAndLoadConfig(::OutlinedConfig, RegisterType.CLIENT)
     fun init() {
         log.info("Hello from Client")
-        start()
+        TestingObj.init()
     }
 }
