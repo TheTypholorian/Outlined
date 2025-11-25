@@ -4,6 +4,7 @@ import com.mojang.blaze3d.vertex.DefaultVertexFormat
 import com.mojang.blaze3d.vertex.VertexFormat
 import com.theendercore.outlined.Outlined.id
 import net.minecraft.Util
+import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderStateShard
 import net.minecraft.client.renderer.RenderStateShard.TextureStateShard
 import net.minecraft.client.renderer.RenderType
@@ -15,6 +16,12 @@ object TestingObj {
 
     fun init() {
         println(OUTLINE_2)
+    }
+
+    @JvmStatic
+    fun getBuffer(buff: MultiBufferSource): MultiBufferSource {
+
+        return buff
     }
 
     @JvmStatic

@@ -11,8 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(RenderType.class)
 public class RenderTypeMixin {
 
-    @Inject(method = "outline(Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;", at=@At("HEAD"), cancellable = true)
-    private static void x(ResourceLocation resourceLocation, CallbackInfoReturnable<RenderType> cir){
-        cir.setReturnValue(TestingObj.getType(resourceLocation));
-    }
+//    @Inject(method = "outline(Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;", at=@At("HEAD"), cancellable = true)
+//    private static void x(ResourceLocation resourceLocation, CallbackInfoReturnable<RenderType> cir){
+//        cir.setReturnValue(TestingObj.getType(resourceLocation));
+//    }
 }
