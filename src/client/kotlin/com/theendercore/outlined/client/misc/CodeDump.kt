@@ -1,17 +1,13 @@
 package com.theendercore.outlined.client.misc
 
 import com.mojang.blaze3d.vertex.DefaultVertexFormat
-import com.mojang.blaze3d.vertex.PoseStack
 import com.mojang.blaze3d.vertex.VertexFormat
 import com.theendercore.outlined.Outlined.id
 import net.minecraft.Util
-import net.minecraft.client.Minecraft
-import net.minecraft.client.renderer.MultiBufferSource
 import net.minecraft.client.renderer.RenderStateShard
 import net.minecraft.client.renderer.RenderStateShard.TextureStateShard
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.resources.ResourceLocation
-import net.minecraft.world.entity.Entity
 import java.util.function.Function
 
 
@@ -21,12 +17,12 @@ object TestingObj {
         println(OUTLINE_2)
     }
 
+    @JvmStatic
+    fun getType(rl: ResourceLocation) = OUTLINE_2.apply(rl)
     val OUTLINE_2: Function<ResourceLocation, RenderType.CompositeRenderType> = Util.memoize {
         RenderType.create(
             id("outline_2").toString(),
-            DefaultVertexFormat.POSITION_TEX_COLOR,
-            VertexFormat.Mode.QUADS,
-            1536,
+            DefaultVertexFormat.POSITION_TEX_COLOR, VertexFormat.Mode.QUADS, 1536,
             RenderType.CompositeState.builder()
                 .setShaderState(RenderStateShard.RENDERTYPE_OUTLINE_SHADER)
                 .setTextureState(TextureStateShard(it, false, false))

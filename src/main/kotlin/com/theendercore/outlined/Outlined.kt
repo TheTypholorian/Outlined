@@ -25,9 +25,6 @@ object Outlined {
             if (debugUse(player, world, hand, entity, hitResult)) InteractionResult.SUCCESS
             else InteractionResult.PASS
         }
-//        UseEntityCallback.EVENT.register { player, world, hand, entity, hitResult ->
-//            if ()
-//        }
     }
 
     private fun debugUse(
@@ -42,7 +39,6 @@ object Outlined {
 
         if (!world.isClientSide) {
             entity.setGlowingTag(!entity.isCurrentlyGlowing)
-//            player.sendSystemMessage(Component.literal("Glowing: ${entity.isCurrentlyGlowing}"))
         }
 
         return true

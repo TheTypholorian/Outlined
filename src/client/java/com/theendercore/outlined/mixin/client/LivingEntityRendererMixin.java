@@ -8,16 +8,16 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.LivingEntityRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
-import org.spongepowered.asm.mixin.Debug;
+import net.minecraft.world.entity.animal.Cow;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Debug(export = true)
 @Mixin(LivingEntityRenderer.class)
-public abstract class LivingEntityRendererMixin {
+public abstract class LivingEntityRendererMixin<T extends LivingEntity> {
     @WrapOperation(method = "getRenderType", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/RenderType;outline(Lnet/minecraft/resources/ResourceLocation;)Lnet/minecraft/client/renderer/RenderType;"))
-    private <T extends LivingEntity> RenderType run(ResourceLocation resourceLocation, Operation<RenderType> original) {
-        Outlined.log.info("Chat i pain");
-        return TestingObj.INSTANCE.getOUTLINE_2().apply(resourceLocation);
+    private RenderType run(ResourceLocation resourceLocation, Operation<RenderType> original) {
+        return TestingObj.getType(resourceLocation);
     }
 }
