@@ -6,6 +6,7 @@
   "client": [
     "client.LevelRendererMixin",
     "client.LivingEntityRendererMixin",
+    "client.MinecraftMixin",
     "client.RenderTypeMixin"
   ],
   "injectors": {
