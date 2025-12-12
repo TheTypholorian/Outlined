@@ -11,9 +11,11 @@ import net.minecraft.Util
 import net.minecraft.client.Minecraft
 import net.minecraft.client.renderer.PostChain
 import net.minecraft.client.renderer.RenderStateShard
+import net.minecraft.client.renderer.RenderStateShard.CullStateShard
 import net.minecraft.client.renderer.RenderStateShard.TextureStateShard
 import net.minecraft.client.renderer.RenderType
 import net.minecraft.resources.ResourceLocation
+import java.util.function.BiFunction
 import java.util.function.Function
 
 @Suppress("unused")
